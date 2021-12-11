@@ -7,9 +7,9 @@ public class NumberCounter {
         Scanner input = new Scanner(System.in);
 
         System.out.print("Enter number count: ");
-        int numberCount = input.nextInt();
+        int Count = input.nextInt();
 
-        int[] numbers = new int[numberCount];
+        int[] numbers = new int[Count];
 
         System.out.println("Enter numbers: ");
         for (int index = 0; index < numbers.length; index++) {
@@ -19,17 +19,17 @@ public class NumberCounter {
         System.out.print("Search for number: ");
         int number = input.nextInt();
 
-        int numberOccurrences = 0; 
+        int numberOfOccurrences = 0; 
         System.out.println("Number occurrences: " + countNumberOccurrences(number, numbers));
     }
 
-    public static int countNumberOccurrences(int number, int[] numbers) {
-      int br=0;
+    public static int countNumberOccurrences(int num, int[] numbers) {
+      int count=0;
           for(int i=0;i<numbers.length;i++){
-            if(numbers[i]==number){
-              br++;
+            if(numbers[i]==num){
+              count++;
             }
           }
-        return br;
+        return count;
     }
 }
